@@ -5,8 +5,7 @@ import {Route,Switch} from 'react-router-dom';
 const RouteLocation = () => {
     return(
         <Switch>
-            <Route exact path="/" component={App}/>
-            
+            <Route exact path="/" component={App}/>     
         </Switch>
     );
 };
