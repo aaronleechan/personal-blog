@@ -2,6 +2,7 @@ import React from 'react';
 import { bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
 import {exampleAction} from '../actions/actions'
+import './App.scss';
 
 class App extends React.Component{
     constructor(props){
@@ -13,7 +14,8 @@ class App extends React.Component{
         return(
             <div>
                 <h1>This is App.js</h1>
-                <p>Here is our property: { this.props.examplePropsOne }</p>
+                <p className="normalfont">Here is our property: { this.props.examplePropsOne }</p>
+                <p className="materialfont">materialfont</p>
             </div>
         )
     }
