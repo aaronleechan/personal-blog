@@ -1,4 +1,4 @@
-export const exampleAction = () =>(
+export const fetchOcean = () =>(
     {
         type: 'Example'
     }
