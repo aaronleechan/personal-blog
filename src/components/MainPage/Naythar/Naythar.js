@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import ApolloClient from 'apollo-boost';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
-
+import './Naythar.scss';
 
 
 
@@ -24,8 +24,11 @@ class Naythar extends React.Component{
     render(){
         return(
             <div>
-                <NaytharHeader></NaytharHeader>
-                <OshinProductLayer></OshinProductLayer>
+                <div className="naytharcontainer">
+                    <NaytharHeader></NaytharHeader>
+                    <OshinProductLayer></OshinProductLayer>
+                    <OtherProductLayer/>
+                </div>
                 <NaytharFooter></NaytharFooter>
             </div>
         )
