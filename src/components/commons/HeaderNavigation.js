@@ -30,7 +30,7 @@ class HeaderNavigation extends React.Component{
     render(){
         const { value } = this.state;
         return(
-            <BottomNavigation value={value} onChange={this.handleChange}>
+            <BottomNavigation className="headerNavigationContainer" value={value} onChange={this.handleChange}>
                 <BottomNavigationAction label="Home" value="home" icon={<HomeIcon/>}/>
                     <BottomNavigationAction label="Shopping" value="shopping" icon={<AddShoppingCartIcon/>}/>
                 <BottomNavigationAction label="Developer" value="developer" icon={<DeveloperModeIcon/>}/>

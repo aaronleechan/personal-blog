@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { GridList, GridListTile, GridListTileBar } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder' 
-import tileData from './titleData';
+import AddShoppingCart from '@material-ui/icons/AddShoppingCart' 
+import AddShoppingCartRounded from '@material-ui/icons/AddShoppingCartRounded'
+import './Naythar.scss';
 
 const styles = theme => ({
   root: {
@@ -23,12 +24,22 @@ const styles = theme => ({
   },
   titleBar: {
     background:
-      'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%, rgba(0,0,0,0) 100%)',
+      'linear-gradient(to top,rgba(0,0,0,0.7) 100%, rgba(0,0,0,0) 100%)',
   },
   imageSize: {
     width: '100%',
-    height: '100%'
-  }
+    height: '100%',
+
+  },
+  icon:{
+    margin: theme.spacing.unit * 2,
+  },
+  iconposition:{
+    margin: 0,
+    color: "white",
+    fontSize: "25px",
+    justifyContent: 'center'
+  },
 });
 
 function SingleLineGridList(props) {
@@ -38,24 +49,30 @@ function SingleLineGridList(props) {
   if(data.loading){
     console.log("loading....");
   }else{
+    console.log(data);
     tileData = data.brand.name
   }
     
   return (
     <div className={classes.root}>
-      <GridList className={classes.gridList} cols={5}>
+      <div className="headerStyle">{props.header}</div>
+      <GridList cellHeight={300} className={classes.gridList} cols={5}>
         {tileData.map(tile =>
           <GridListTile key={tile.imageurl}>
-            <img className={classes.imageSize} src={tile.imageurl} alt={tile.name} />
+            <img className={classes.imageSize} src={tile.imageurl} alt={tile.name}/>
             <GridListTileBar
               title={tile.name}
+              price={tile.price}
               classes={{
                 root: classes.titleBar,
-                title: classes.title,
+                title: classes.title
               }}
               actionIcon={
                 <IconButton>
-                  <span className={classes.title}>{tile.price} $</span>
+                  <span className={classes.iconposition}>
+                    <AddShoppingCartRounded fontSize="small" />
+                    &nbsp;{tile.price}$
+                  </span>
                 </IconButton>
               }
             />
@@ -69,5 +86,4 @@ function SingleLineGridList(props) {
 SingleLineGridList.propTypes = {
   classes: PropTypes.object.isRequired,
 };
-
 export default withStyles(styles)(SingleLineGridList);
