@@ -1,0 +1,66 @@
+.naytharcontainer{
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+.naytharheadercontainer{
+    position: relative;
+    float: right;
+}
+
+.naytharcontainer:after{
+    content: "";
+    display: block;
+}
+
+.naytharfootercontainer{
+    margin: 0;
+    position: relative;
+    width: 100% !important;
+    height: 250px !important;
+    bottom: 0 !important;
+    background-color: yellowgreen;
+}
+
+.naythartitleStyle{
+    padding: 10px;
+    font-size: 35px !important;
+    font-style: oblique;
+    color: #FFD700
+}
+
+.headerStyle{
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    color: navy;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.naytharfontstylecontainer{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.oshincontainer{
+    margin: 0;
+    margin-top: 60px;
+    position: relative;
+    width: 100% !important;
+    height: 5%;
+    padding-bottom: 30px;
+}
+
+.othercontainer{
+    margin: 0;
+    position: relative;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    width: 100% !important;
+}
+
+.titleheadercontainer{
+    padding-bottom: 10px;
+    font-style: italic;
+}
