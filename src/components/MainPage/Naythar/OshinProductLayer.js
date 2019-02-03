@@ -23,8 +23,7 @@ class OshinProductLayer extends React.Component{
     render(){
         return(
             <div className="oshincontainer">
-                <TitleHeader title="O SHIN"/>
-                <SingleLineGridList header = "O SHIN" data={this.props.data}/>
+                <SingleLineGridList header = "O-SHIN" data={this.props.data}/>
             </div>
         )
     }
