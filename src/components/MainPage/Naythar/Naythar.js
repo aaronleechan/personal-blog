@@ -10,6 +10,7 @@ import ApolloClient from 'apollo-boost';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
 import './Naythar.scss';
+import Carosual from './Carosual';
 
 
 
@@ -26,6 +27,7 @@ class Naythar extends React.Component{
             <div>
                 <div className="naytharcontainer">
                     <NaytharHeader></NaytharHeader>
+                    <Carosual/>
                     <OshinProductLayer></OshinProductLayer>
                     <OtherProductLayer/>
                 </div>
