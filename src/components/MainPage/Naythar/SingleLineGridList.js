@@ -47,9 +47,9 @@ function SingleLineGridList(props) {
   var data = props.data
   var tileData = [];
   if(data.loading){
-    console.log("loading....");
+    //console.log("loading....");
   }else{
-    console.log(data);
+    //console.log(data);
     tileData = data.brand.name
   }
     
